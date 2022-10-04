@@ -25,12 +25,31 @@ persist_with: logements_sociaux_demo_default_datagroup
 # Typically, join parameters require that you define the join type, join relationship, and a sql_on clause.
 # Each joined view also needs to define a primary key.
 
-explore: arrondissements {
+#20221004 - ldo, version jade
+#explore: arrondissements {
+#  join: commercants_parisiens {
+#    type: left_outer
+#    relationship: one_to_one
+#    sql_on: ${arrondissements.code_postal} = ${commercants_parisiens.code_postal} ;;
+#  }
+#}
+
+#explore: commercants_parisiens {}
+
+#20221004 - version ldo
+explore: logement_sociaux_fin   {
+  join: arrondissements {
+    type: left_outer
+    relationship: one_to_one
+    sql_on: ${arrondissements.code_postal} = ${logement_sociaux_fin.code_postal} ;;
+  }
   join: commercants_parisiens {
     type: left_outer
     relationship: one_to_one
-    sql_on: ${arrondissements.code_postal} = ${commercants_parisiens.code_postal} ;;
+    sql_on: ${logement_sociaux_fin.code_postal} = ${commercants_parisiens.code_postal} ;;
   }
+
 }
 
+explore: arrondissements {}
 explore: commercants_parisiens {}

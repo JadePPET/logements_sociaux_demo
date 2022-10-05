@@ -74,7 +74,8 @@ view: arrondissements {
 
   dimension: surface {
     type: number
-    sql: ${TABLE}."surface" ;;
+    value_format: "#,##0.0"
+    sql: (${TABLE}."surface")/10000 ;;
   }
 
   #measure: count {

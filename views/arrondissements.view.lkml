@@ -74,11 +74,11 @@ view: arrondissements {
 
   dimension: surface {
     type: number
-    sql: ${TABLE}."surface";;
+    value_format: "#,##0.0"
+    sql: (${TABLE}."surface")/10000;;
   }
 
-  #measure: count {(${TABLE}."surface")/10000
-  # value_format: "#,##0.0"
+  #measure: count {
   #  type: count
   #  drill_fields: [id_arrondissement]
   # }

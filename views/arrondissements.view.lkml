@@ -73,7 +73,7 @@ view: arrondissements {
   }
 
   measure: surface {
-    type: number
+    type: sum
     value_format: "#,##0.0"
     sql: (${TABLE}."surface")/10000;;
   }

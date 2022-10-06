@@ -46,7 +46,7 @@ explore: logement_sociaux_fin   {
   join: commercants_parisiens {
     type: left_outer
     relationship: one_to_one
-    sql_on: ${logement_sociaux_fin.code_postal} = ${commercants_parisiens.code_postal} ;;
+    sql_on: ${commercants_parisiens.code_postal}  = ${logement_sociaux_fin.code_postal} ;;
   }
 
 }

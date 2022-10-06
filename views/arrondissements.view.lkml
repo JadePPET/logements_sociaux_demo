@@ -72,7 +72,7 @@ view: arrondissements {
     sql: ${perimetre} ;;
   }
 
-  dimension: surface {
+  measure: surface {
     type: number
     value_format: "#,##0.0"
     sql: (${TABLE}."surface")/10000;;

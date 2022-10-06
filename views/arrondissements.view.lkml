@@ -77,7 +77,7 @@ view: arrondissements {
   }
 
   measure: surface_calculation {
-    type: sum
+    type: max
     value_format: "#,##0.0"
     sql: (${TABLE}."surface")/10000;;
   }

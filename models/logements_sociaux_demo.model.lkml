@@ -48,7 +48,6 @@ explore: logement_sociaux_fin   {
     relationship: one_to_one
     sql_on: ${logement_sociaux_fin.code_postal} = ${commercants_parisiens.code_postal} ;;
   }
-
 }
 
 explore: arrondissements {}

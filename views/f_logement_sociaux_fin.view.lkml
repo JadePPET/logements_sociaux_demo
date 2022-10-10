@@ -126,12 +126,6 @@ view: logement_sociaux_fin {
     sql_longitude: ${TABLE}."longitude" ;;
   }
 
-
-  measure: aggr_logement_finance_by_bailleur {
-    type: sum
-    sql: ${TABLE}."nb_logment_finance" group by ${TABLE}."bailleur_social";;
-  }
-
   measure: count {
     type: count
     drill_fields: []

@@ -122,8 +122,8 @@ view: logement_sociaux_fin {
 
   dimension: maps_points {
     type: location
-    sql_latitude: SUBSTRING(${TABLE}."geo_point_2d",1,INSTR(${TABLE}."geo_point_2d",',')-1) ;;
-    sql_longitude: SUBSTRING(${TABLE}."geo_point_2d",INSTR(${TABLE}."geo_point_2d",',')-1,LENGTH(${TABLE}."geo_point_2d")) ;;
+    sql_latitude: ${TABLE}."latitude" ;;
+    sql_longitude: ${TABLE}."longitude" ;;
   }
 
 

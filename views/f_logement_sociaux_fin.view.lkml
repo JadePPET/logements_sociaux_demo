@@ -90,11 +90,6 @@ view: logement_sociaux_fin {
     sql: ${nb_logment_finance} ;;
   }
 
-  measure: average_nb_logment_finance {
-    type: average
-    sql: ${nb_logment_finance} ;;
-  }
-
   dimension: nb_logment_pla_i {
     type: number
     sql: ${TABLE}."nb_logment_pla_i" ;;
@@ -120,8 +115,11 @@ view: logement_sociaux_fin {
     sql: ${TABLE}."ville" ;;
   }
 
-  measure: count {
-    type: count
-    drill_fields: []
+  dimension: maps_points {
+    type: location
+    sql_latitude: ${TABLE}."latitude" ;;
+    sql_longitude: ${TABLE}."longitude" ;;
   }
+
+
 }

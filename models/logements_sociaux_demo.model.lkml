@@ -49,8 +49,16 @@ explore: logement_sociaux_fin   {
     relationship: one_to_one
     sql_on: ${arrondissements.code_postal} = ${logement_sociaux_fin.code_postal} ;;
   }
+#<<<<<<< HEAD
 
 
+#=======
+#  join: commercants_parisiens {
+#    type: left_outer
+#    relationship: one_to_one
+#    sql_on: ${logement_sociaux_fin.code_postal} = ${commercants_parisiens.code_postal} ;;
+#  }
+#>>>>>>> branch 'main' of https://github.com/JadePPET/logements_sociaux_demo
 }
 
 explore: arrondissements {}

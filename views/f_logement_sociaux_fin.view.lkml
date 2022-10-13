@@ -126,8 +126,5 @@ view: logement_sociaux_fin {
     sql_longitude: ${TABLE}."longitude" ;;
   }
 
-  measure: count {
-    type: count
-    drill_fields: []
-  }
+
 }

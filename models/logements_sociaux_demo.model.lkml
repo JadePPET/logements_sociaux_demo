@@ -38,16 +38,18 @@ persist_with: logements_sociaux_demo_default_datagroup
 
 #20221004 - version ldo
 explore: logement_sociaux_fin   {
-  join: arrondissements {
-    type: left_outer
-    relationship: one_to_one
-    sql_on: ${arrondissements.code_postal} = ${logement_sociaux_fin.code_postal} ;;
-  }
+
   join: commercants_parisiens {
     type: left_outer
     relationship: one_to_one
     sql_on: ${commercants_parisiens.code_postal}  = ${logement_sociaux_fin.code_postal} ;;
   }
+  join: arrondissements {
+    type: left_outer
+    relationship: one_to_one
+    sql_on: ${arrondissements.code_postal} = ${logement_sociaux_fin.code_postal} ;;
+  }
+
 
 }
 

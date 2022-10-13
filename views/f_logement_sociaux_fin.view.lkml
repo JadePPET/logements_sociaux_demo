@@ -11,7 +11,7 @@ view: logement_sociaux_fin {
   # This dimension will be called "Adresse Programme" in Explore.
 
   dimension: adresse_programme {
-    type: number
+    type: string
     sql: ${TABLE}."adresse_programme" ;;
   }
 

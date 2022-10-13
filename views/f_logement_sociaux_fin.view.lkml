@@ -90,11 +90,6 @@ view: logement_sociaux_fin {
     sql: ${nb_logment_finance} ;;
   }
 
-  measure: average_nb_logment_finance {
-    type: average
-    sql: ${nb_logment_finance} ;;
-  }
-
   dimension: nb_logment_pla_i {
     type: number
     sql: ${TABLE}."nb_logment_pla_i" ;;

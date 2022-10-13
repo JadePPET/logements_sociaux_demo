@@ -16,7 +16,7 @@ view: logement_sociaux_fin {
   }
 
   dimension: annee_financement {
-    type: string
+    type: number
     sql: ${TABLE}."annee_financement" ;;
   }
 
